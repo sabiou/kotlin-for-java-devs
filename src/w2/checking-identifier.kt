@@ -5,8 +5,7 @@ package w2
 // digits and underscores.
 
 fun isValidIdentifier(string: String): Boolean {
-    fun isValidCharacter(char: Char) = char == '_' ||
-            char in '0'..'9' || char in 'a'..'z' || char in 'A'..'Z'
+    fun isValidCharacter(char: Char) = char == '_' || char.isLetterOrDigit()
 
     for (char in string) {
         if (!isValidCharacter(char)) return false
