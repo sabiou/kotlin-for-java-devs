@@ -9,7 +9,7 @@ fun isValidIdentifier(string: String): Boolean {
 
     for (char in string) {
         if (!isValidCharacter(char)) return false
-        if (string.isEmpty() || string[0] in '0'..'9') return false
+        if (string.isEmpty() || string[0].isDigit()) return false
     }
     return true
 }
